@@ -26,6 +26,7 @@ public class UserController {
     public String login(@RequestBody User user) {
         var u = userRepository.findByUserName(user.getUserName());
         if(!Objects.isNull(u)) 
-        return "success";
+            return "success";
+        return "failure";
     }
 }
